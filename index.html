@@ -1,0 +1,142 @@
+<!--LEGAL-DNA:{"jurisdiction":"US/MN/Baxter","export_tag":"EAR99","spdx":"MIT","artifact_time":1748903372138,"def_pub":"OIN","consent_req":true,"city":"Baxter"}-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shroomtop420™ Repo Automation Onboarding</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://github.com https://docs.github.com https://shroomtop.github.io; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com;">
+  <meta name="description" content="Step-by-step web onboarding for Shroomtop420™ OmniPaste and GPT Repo Updater UI. All links and instructions to generate and use GitHub access tokens included.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    ::selection { background:#38bdf8; color:#18181b; }
+    .link { color:#38bdf8; text-decoration:underline; }
+    .step-badge { @apply bg-sky-700 text-sky-100 font-bold rounded-full px-3 py-1 mr-2; }
+    .important { @apply text-rose-500 font-semibold; }
+  </style>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col items-center p-4 font-mono">
+  <main class="w-full max-w-2xl mx-auto mt-8 bg-gray-900/80 rounded-2xl shadow-2xl p-6 flex flex-col gap-8 border border-sky-900">
+    <header class="flex flex-col gap-2 items-center mb-2">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-sky-400 tracking-tight mb-1">Shroomtop420™ Repo Automation Onboarding</h1>
+      <p class="text-lg text-sky-200 font-semibold">OmniPaste + GPT Repo Updater UI Workflow</p>
+      <div class="flex flex-wrap gap-2 mt-2">
+        <a href="https://shroomtop.github.io/OmniPaste/" class="link" target="_blank">OmniPaste</a>
+        <a href="https://shroomtop.github.io/gpt-repo-updater-ui/" class="link" target="_blank">GPT Repo Updater UI</a>
+        <a href="https://github.com/settings/tokens" class="link" target="_blank">GitHub Tokens</a>
+        <a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token" class="link" target="_blank">GitHub PAT Docs</a>
+      </div>
+    </header>
+    <!-- Steps Start -->
+    <section>
+      <h2 class="text-xl font-bold text-sky-300 mb-3">Step 1: Create a GitHub Personal Access Token (PAT)</h2>
+      <ol class="list-decimal ml-6 space-y-2">
+        <li>
+          Go to <a class="link" href="https://github.com/settings/tokens" target="_blank">GitHub Personal Access Tokens</a>.
+        </li>
+        <li>
+          Click <b>“Generate new token” → “Generate new token (classic)”</b>.
+        </li>
+        <li>
+          <b>Name your token</b> (e.g., <code>omnipaste-token</code> or <code>gpt-repo-updater</code>).
+        </li>
+        <li>
+          Set expiration (<span class="important">recommended: 30 or 90 days</span>, or “No expiration” for long-term).
+        </li>
+        <li>
+          <b>Select scopes:</b><br>
+          <span class="ml-4">• For <b>public repos</b>: <code>repo</code> (read/write access)</span><br>
+          <span class="ml-4">• For <b>private repos</b>: <code>repo</code> and any extra needed (e.g., <code>workflow</code> for Actions, <code>admin:repo_hook</code> for hooks)</span><br>
+          <span class="ml-4 important">• Do NOT select more than you need!</span>
+        </li>
+        <li>
+          Click <b>“Generate token”</b> and <span class="important">copy it immediately</span>—GitHub will <b>not</b> show it again!
+        </li>
+        <li>
+          <span class="important">Never share your token publicly!</span>
+        </li>
+      </ol>
+      <div class="mt-4 text-xs text-gray-400">
+        <b>References:</b>
+        <a class="link" href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token" target="_blank">PAT Official Guide</a>
+      </div>
+    </section>
+    <section>
+      <h2 class="text-xl font-bold text-sky-300 mb-3">Step 2: Use OmniPaste to Initialize Your Repo</h2>
+      <ol class="list-decimal ml-6 space-y-2">
+        <li>
+          Go to <a class="link" href="https://shroomtop.github.io/OmniPaste/" target="_blank">OmniPaste</a>.
+        </li>
+        <li>
+          Enter your new repo name (<span class="important">lowercase, no spaces</span>).
+        </li>
+        <li>
+          Follow prompts to push your starter HTML file to a new, empty GitHub repo under your account.<br>
+          <span class="text-gray-400">Paste your token if prompted.</span>
+        </li>
+      </ol>
+    </section>
+    <section>
+      <h2 class="text-xl font-bold text-sky-300 mb-3">Step 3: Generate and Use a Repo Upgrade Prompt</h2>
+      <ol class="list-decimal ml-6 space-y-2">
+        <li>
+          Go to <a class="link" href="https://shroomtop.github.io/gpt-repo-updater-ui/" target="_blank">GPT Repo Updater UI</a>.
+        </li>
+        <li>
+          Select your new repo from the list.
+        </li>
+        <li>
+          Fill out what you want to add/improve (e.g., <code>LICENSE</code>, <code>README</code>, <code>.gitignore</code>, <code>manifest</code>, <code>promptmeta</code>, <code>VERSION</code>, etc).
+        </li>
+        <li>
+          Copy the generated prompt.
+        </li>
+        <li>
+          Paste into <span class="important">ChatGPT-4.1</span> to generate all missing files and best-practice outputs.
+        </li>
+      </ol>
+    </section>
+    <section>
+      <h2 class="text-xl font-bold text-sky-300 mb-3">Step 4: Package and Upload Files</h2>
+      <ol class="list-decimal ml-6 space-y-2">
+        <li>
+          In ChatGPT-o4 (or a GPT version that supports zipping/downloads), request: <b>“Package all files into a ZIP and provide download.”</b>
+        </li>
+        <li>
+          Download and unzip files locally.
+        </li>
+        <li>
+          Go back to <a class="link" href="https://shroomtop.github.io/gpt-repo-updater-ui/" target="_blank">GPT Repo Updater UI</a> and upload files to your repo.
+        </li>
+      </ol>
+    </section>
+    <section>
+      <h2 class="text-xl font-bold text-sky-300 mb-3">Step 5: Audit and Finalize</h2>
+      <ol class="list-decimal ml-6 space-y-2">
+        <li>
+          Ask ChatGPT: <b>“List any missing or non-compliant files/items in my repo.”</b>
+        </li>
+        <li>
+          Repeat steps 3–5 until your repo is complete and production-grade.
+        </li>
+      </ol>
+    </section>
+    <section class="bg-sky-950/70 rounded-xl p-4 mt-6 text-sm border border-sky-700">
+      <h2 class="font-bold text-sky-300 mb-1">Security & Best Practices</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>Revoke any token you suspect is compromised: <a class="link" href="https://github.com/settings/tokens" target="_blank">Token Management</a></li>
+        <li>Use a separate token for each tool if you want to control access granularity.</li>
+        <li>Never expose your tokens in public code, chats, or screenshots.</li>
+      </ul>
+    </section>
+    <footer class="mt-8 text-xs text-gray-500 flex flex-col gap-1 items-center">
+      <span>© 2025 Shroomtop420™ | Repo Automation System</span>
+      <span>Version 1.0 – <span id="timestamp"></span></span>
+    </footer>
+  </main>
+  <script>
+    document.getElementById("timestamp").textContent =
+      new Date().toLocaleString('en-US', { timeZone: 'America/Chicago', month:'long', day:'numeric', year:'numeric', hour:'2-digit', minute:'2-digit', hour12:true });
+  </script>
+</body>
+</html>
