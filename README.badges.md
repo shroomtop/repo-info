@@ -1,0 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.txt)
+[![Release](https://img.shields.io/github/v/release/shroomtop/repo-info?include_prereleases)](https://github.com/shroomtop/repo-info/releases)
+[![Deploy](https://img.shields.io/github/deployments/shroomtop/repo-info/github-pages?label=github%20pages)](https://shroomtop.github.io/repo-info/)
+[![Actions Status](https://github.com/shroomtop/repo-info/actions/workflows/main.yml/badge.svg)](https://github.com/shroomtop/repo-info/actions)
+[![Last Commit](https://img.shields.io/github/last-commit/shroomtop/repo-info)](https://github.com/shroomtop/repo-info/commits/main)
